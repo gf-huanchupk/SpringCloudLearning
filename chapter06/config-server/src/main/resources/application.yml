@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gf-huanchupk/SpringCloudLearning/
+          search-paths: respo
+          username:
+          password:
+      label: master
+server:
+  port: 8888
