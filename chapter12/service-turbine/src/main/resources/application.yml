@@ -1,0 +1,31 @@
+server:
+  port: 8764
+
+spring:
+  application:
+    name: service-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
+#1.turbine.app-config=service-hi,service-oh指定了要监控的应用名字为service-hi,service-oh
+#2.turbine.cluster-name-expression="default",表示集群的名字为default
+#3.turbine.combine-host-port=true表示同一主机上的服务通过host和port的组合来进行区分，默认情况下是使用host来区分，这样会使本地调试有问题
+turbine:
+  app-config: service-hi,service-oh
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  combine-host-port: true
+
