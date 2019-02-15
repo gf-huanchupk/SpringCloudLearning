@@ -1,0 +1,129 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: group_route
+
+---
+spring:
+  profiles: cookie_route
+  cloud:
+    gateway:
+      routes:
+        - id: after_route
+          uri: http://httpbin.org
+          predicates:
+          - After=2019-02-14T00:00:00+08:00[Asia/Shanghai]
+
+---
+spring:
+  profiles: before_route
+  cloud:
+    gateway:
+      routes:
+        - id: before_route
+          uri: http://httpbin.org
+          predicates:
+          - Before=2019-02-14T00:00:00+08:00[Asia/Shanghai]
+
+---
+spring:
+  profiles: between_route
+  cloud:
+    gateway:
+      routes:
+        - id: between_route
+          uri: http://httpbin.org
+          predicates:
+          - Between=2018-02-14T00:00:00+08:00[Asia/Shanghai], 2019-02-16T23:59:59+08:00[Asia/Shanghai]
+
+---
+spring:
+  profiles: cookie_route
+  cloud:
+    gateway:
+      routes:
+        - id: cookie_route
+          uri: http://httpbin.org
+          predicates:
+          - Cookie=name, chengxuyuanguoguo
+
+---
+spring:
+  profiles: header_route
+  cloud:
+    gateway:
+      routes:
+        - id: header_route
+          uri: http://httpbin.org
+          predicates:
+          - Header=X-Request-Id, \d+
+
+---
+spring:
+  profiles: host_route
+  cloud:
+    gateway:
+      routes:
+        - id: host_route
+          uri: http://httpbin.org
+          predicates:
+            - Host=**.httpbin.com
+
+---
+spring:
+  profiles: method_route
+  cloud:
+    gateway:
+      routes:
+        - id: method_route
+          uri: http://httpbin.org
+          predicates:
+          - Method=GET
+
+---
+spring:
+  profiles: path_route
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://httpbin.org
+          predicates:
+            - Path=/foo/{segment}
+
+---
+spring:
+  profiles: query_route
+  cloud:
+    gateway:
+      routes:
+        - id: query_route
+          uri: http://httpbin.org
+          predicates:
+          - Query=foo
+
+---
+spring:
+  profiles: remoteaddr_route
+  cloud:
+    gateway:
+      routes:
+        - id: remoteaddr_route
+          uri: http://httpbin.org
+          predicates:
+          - RemoteAddr=172.16.1.73/24
+
+---
+spring:
+  profiles: group_route
+  cloud:
+    gateway:
+      routes:
+        - id: group_route
+          uri: http://httpbin.org
+          predicates:
+          - Host=**.httpbin.com
+          - Header=X-Request-Id, \d+
+          - Cookie=name, chengxuyuanguoguo
+          - After=2019-02-15T00:00:00+08:00[Asia/Shanghai]
