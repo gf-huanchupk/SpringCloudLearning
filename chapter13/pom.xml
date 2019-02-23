@@ -21,6 +21,7 @@
 	<modules>
 		<module>springcloud-gateway-hello</module>
 		<module>springcloud-gateway-predicate</module>
+		<module>springcloud-gateway-filter</module>
 	</modules>
 
 	<properties>
