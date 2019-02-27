@@ -22,6 +22,7 @@
 		<module>springcloud-gateway-hello</module>
 		<module>springcloud-gateway-predicate</module>
 		<module>springcloud-gateway-filter</module>
+		<module>springcloud-gateway-ratelimiter</module>
 	</modules>
 
 	<properties>

@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: limit_route
+          uri: http://httpbin.org:80/get
+          predicates:
+          - After=2019-02-26T00:00:00+08:00[Asia/Shanghai]
+          filters:
+          - name: RequestRateLimiter
+            args:
+              key-resolver: '#{@hostAddrKeyResolver}'
+              redis-rate-limiter.replenishRate: 1
+              redis-rate-limiter.burstCapacity: 3
+  application:
+    name: gateway-limiter
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
