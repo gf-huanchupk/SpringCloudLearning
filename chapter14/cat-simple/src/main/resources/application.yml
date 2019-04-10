@@ -1,0 +1,6 @@
+server:
+  port: 8760
+
+spring:
+  application:
+    name: cat-simple
