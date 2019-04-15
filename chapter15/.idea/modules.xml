@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cat-business-consumer/cat-business-consumer.iml" filepath="$PROJECT_DIR$/cat-business-consumer/cat-business-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cat-order-service/cat-order-service.iml" filepath="$PROJECT_DIR$/cat-order-service/cat-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cat-storage-service/cat-storage-service.iml" filepath="$PROJECT_DIR$/cat-storage-service/cat-storage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cat-ui/cat-ui.iml" filepath="$PROJECT_DIR$/cat-ui/cat-ui.iml" />
+    </modules>
+  </component>
+</project>

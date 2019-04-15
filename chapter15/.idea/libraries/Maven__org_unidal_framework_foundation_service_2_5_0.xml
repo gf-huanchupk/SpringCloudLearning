@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.unidal.framework:foundation-service:2.5.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/foundation-service/2.5.0/foundation-service-2.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/foundation-service/2.5.0/foundation-service-2.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/foundation-service/2.5.0/foundation-service-2.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
