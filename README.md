@@ -87,6 +87,6 @@
         欢迎扫码或微信搜索公众号《程序员果果》关注我，更多精彩内容不能错过 ~~
     </p>
     <p align="center" style="margin-top: 15px; font-size: 11px;color: #cc0000;">
-        <strong>（转载本站文章请注明作者和出处 <a href="https://blog.csdn.net/u010562966">程序员果果的博客</a>）</strong>
+        <strong>（转载本站文章请注明作者和出处 <a href="http://blog.itwolfed.com/">程序员果果的博客</a>）</strong>
     </p>
 </div>
